@@ -2,6 +2,7 @@
 
 @use 'reset';
 @use 'font'; 
+@use 'utils' as *;
 
 body {
     font-family:Ria, 'Noto Sans KR', sans-serif;
@@ -37,10 +38,39 @@ body {
     /* inset:top right bottom left */
 }
 .main{
-    background-color: #fff;
     border-radius: 10px;
     width: calc(50% - 16px);
     margin: 8px 8px 8px auto;
-    padding-top: 100px;
+    text-align: center;
     
+    h2 {
+        
+        font-family: 'Rubik Bubbles',fantasy;
+        letter-spacing:5px;
+        font-size: 60px;
+        font-weight: 400;
+    }
+    
+    section {
+        margin:8px 0;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+}
+.intro{ 
+    height: calc(100vh - 16px);
+    @include center;
+}
+
+.work {
+    @include center;
+    height:60vh;
+    min-height: 550px;
+    position: relative;
+    .cat{
+        position: absolute;
+        background-color: red;
+        left: px;
+
+    }
 }

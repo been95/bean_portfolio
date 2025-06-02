@@ -1,169 +1,155 @@
-@charset "utf-8"; 
+@charset "utf-8";
+@use "sass:list";
+@use "sass:map";
 
-@use 'reset';
-@use 'font'; 
-@use 'utils' as *;
+@use "variables" as *;
+@use "reset";
+@use "font";
+@use "utils" as *;
 
 body {
-    font-family:Ria, 'Noto Sans KR', sans-serif;
-    background-color: #182943;
+  font-family: Ria, "Noto Sans KR", sans-serif;
+  background-color: #182943;
 }
-.head{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    inset: 0 0 auto 0;
-    z-index: 99;
-    padding: 40px;
-    h1{
-        color: #fff;
-    }
+.head {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 99;
+  padding: 40px;
+  h1 {
+    color: #fff;
+  }
 }
 
-.main-bg{
-    width: 50%;
-   height:100vh;
-    background-image: url(../../images/main.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    position: fixed;
-    inset:0 auto 0 0;
-    /*
+.main-bg {
+  width: 50%;
+  height: 100vh;
+  background-image: url(../../images/main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  inset: 0 auto 0 0;
+  /*
     left:0;
     top:0;
     bottom:0;
     */
-    
-    /* inset:top right bottom left */
+
+  /* inset:top right bottom left */
 }
-.main{
-    border-radius: 10px;
-    width: calc(50% - 16px);
-    margin: 8px 8px 8px auto;
-    text-align: center;
-    
-    h2 {
-        
-        font-family: 'Rubik Bubbles',fantasy;
-        letter-spacing:5px;
-        font-size: 60px;
-        font-weight: 400;
-    }
-    
-    section {
-        margin:8px 0;
-        background-color: #fff;
-        border-radius: 10px;
-    }
+.main {
+  border-radius: 10px;
+  width: calc(50% - 16px);
+  margin: 8px 8px 8px auto;
+  text-align: center;
+
+  h2 {
+    font-family: "Rubik Bubbles", fantasy;
+    letter-spacing: 5px;
+    font-size: 60px;
+    font-weight: 400;
+  }
+
+  section {
+    margin: 8px 0;
+    background-color: map.get($box, bg);
+    border-radius: map.get($box, radius);
+  }
+  .noBg {
+    background-color: transparent;
+  }
 }
-.intro{ 
-    height: calc(100vh - 16px);
-    @include center;
+
+.intro {
+  height: calc(100vh - 16px);
+  @include center;
 }
 
 .work {
-    @include center;
-    height:60vh;
-    min-height: 550px;
-    position: relative;
-    .star{
+  @include center;
+  height: 60vh;
+  min-height: 550px;
+  position: relative;
+  button {
+    position: absolute;
+  }
+  .star {
+    left: 30px;
+    top: 30px;
+    width: 155px;
+  }
+  .painting {
+    right: 40px;
+    top: 100px;
+    width: 235px;
+  }
 
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        width: 155px;
-        height: 159px;
-        background-image: url(../../images/star.png);
-    }
-   .painting{
-        position: absolute;
-        background-color: lawngreen;
-        right: 40px;
-        top: 100px;
-        background-image: url(../../images/painting.png);
-        width: 235px;
-        height: 177px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  .computer {
+    width: 220px;
+    rotate: -15deg;
+    border-radius: 5px;
+    left: 60px;
+    bottom: 30px;
+  }
+  .been {
+    right: 40px;
+    bottom: 40px;
+    width: 160px;
+  }
 
-       .computer{
-        width: 220px;
-        height: 230px;
-        border-radius: 5px;
-        position: absolute;
-        background-color: #182943;
-        left: 80px;
-        bottom: 30px;
-        background-image: url(../../images/coding.png);
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .been{
-        position: absolute;
-        background-color: aquamarine;
-        right: 40px;
-        bottom: 40px;
-        background-image: url(../../images/been.png);
-        width: 160px;
-        height: 160px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-    }
-  
-    a{
-        width: 180px;
-        background-color: #182943;
-        border-radius: 50px;
-        height: 50px;
-        display: block;
-        color: #fff;
-        display: inline-block;
-        padding: 15px 30px;
-    }
-    
+  a {
+    width: 180px;
+    background-color: #182943;
+    border-radius: 50px;
+    height: 50px;
+    display: block;
+    color: #fff;
+    display: inline-block;
+    padding: 15px 30px;
+  }
 }
-.profile{
-    display: flex;
-    height: 100vh;
-    background: white;
-    height: 460px;
-    gap: 5px;
-    border-radius:8px;
-    .profile-left{
-        width: 35%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        font-weight: bold;
-        writing-mode: vertical-rl;
 
+.profile {
+  display: flex;
+
+  min-height: 460px;
+  gap: 8px;
+
+  .profile-left {
+    width: 35%;
+    background-color: map.get($box, bg);
+    border-radius: map.get($box, radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+  }
+  .profile-right {
+    width: 65%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: map.get($box, bg);
+    border-radius: map.get($box, radius);
+
+    strong {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-    .profile-right{
-        width: 65%;
-        padding: 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        strong{
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        P{
-            font-size: 1rem;
-            line-height: 1.6;
-             margin-bottom: 40px;
-             font-family: "Noto Sans KR";
-        }
+    P {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-family: "Noto Sans KR";
     }
+  }
 }
 .contact-section {
   background: black;
@@ -173,23 +159,21 @@ body {
   position: relative;
 }
 
-
 .scrolling-contact {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    padding: 10px 0;
-    position: relative;
-    z-index: 1;
-  span{
-        display: inline-block;
-        padding-left: 100%;
-        animation: scroll-left 20s linear infinite;
-        font-size: 3rem;
-        font-weight: bold;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1;
+  span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 50s linear infinite;
+    font-size: 3rem;
+    font-weight: bold;
   }
 }
 
@@ -203,9 +187,11 @@ body {
 }
 
 .footer {
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  width: calc(50% - 16px);
+  margin: 8px 8px 8px auto;
 }
 .footer-logo {
   font-size: 2rem;

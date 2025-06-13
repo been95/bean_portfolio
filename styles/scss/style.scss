@@ -9,7 +9,7 @@
 
 body {
   font-family: Ria, "Noto Sans KR", sans-serif;
-  background-color: #182943;
+  background-color: #81c4ed;
 }
 .head {
   display: flex;
@@ -22,11 +22,10 @@ body {
     color: #fff;
   }
 }
-
 .main-bg {
   width: 50%;
   height: 100vh;
-  background-image: url(../../images/main.jpg);
+  background-image: url(../../images/main.jpeg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -51,6 +50,7 @@ body {
     letter-spacing: 5px;
     font-size: 60px;
     font-weight: 400;
+    color: #4bc2a6;
   }
 
   section {
@@ -66,6 +66,28 @@ body {
 .intro {
   height: calc(100vh - 16px);
   @include center;
+  strong {
+    color: #99dfa5;
+  }
+  img {
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #99dfa5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    // top: calc(50% - 85px);
+    // left: calc(50% - 85px);
+    z-index: 99;
+    transition: all 1s ease-in;
+
+    &.hide {
+      top: -170px;
+      opacity: 0;
+      //   rotate: 1080deg;
+    }
+  }
 }
 
 .work {
@@ -80,11 +102,16 @@ body {
     left: 30px;
     top: 30px;
     width: 155px;
+    rotate: 13deg;
+    img {
+      border-radius: 10px;
+    }
   }
   .painting {
     right: 40px;
-    top: 100px;
+    top: -17px;
     width: 235px;
+    rotate: 20deg;
   }
 
   .computer {
@@ -92,7 +119,7 @@ body {
     rotate: -15deg;
     border-radius: 5px;
     left: 60px;
-    bottom: 30px;
+    bottom: -22px;
   }
   .been {
     right: 40px;
@@ -102,7 +129,7 @@ body {
 
   a {
     width: 180px;
-    background-color: #182943;
+    background-color: #81c4ed;
     border-radius: 50px;
     height: 50px;
     display: block;

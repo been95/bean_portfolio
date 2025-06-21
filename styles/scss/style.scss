@@ -25,12 +25,70 @@ body {
 .main-bg {
   width: 50%;
   height: 100vh;
-  background-image: url(../../images/main.jpeg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+
   position: fixed;
   inset: 0 auto 0 0;
+  background: no-repeat center center/cover;
+  background-image: url($url + "cloud.png"), url($url + "cloud_back.png");
+
+  img {
+    position: absolute;
+  }
+
+  // image layout
+
+  .ground {
+    bottom: -22px;
+    left: 0;
+    right: 0;
+    height: 180px;
+  }
+  .mountain_1 {
+    right: 0;
+    bottom: 138px;
+    width: 300px;
+  }
+  .mountain_2 {
+    left: 0;
+    bottom: 118px;
+    width: 250px;
+  }
+  .tree1 {
+    right: 0;
+    bottom: 137px;
+    width: 220px;
+  }
+  .tree2 {
+    left: 30%;
+    bottom: 137px;
+    width: 40px;
+  }
+  .tree3 {
+    left: 6%;
+    bottom: 137px;
+    width: 90px;
+  }
+  .girl {
+    bottom: 100px;
+    left: 40%;
+    width: 18%;
+    min-width: 110px;
+    max-width: 200px;
+    position: fixed;
+  }
+
+  .front_left {
+    left: 0;
+    bottom: 0;
+    width: 40%;
+  }
+
+  .front_right {
+    right: 0;
+    bottom: 0;
+    width: 30%;
+  }
+
   /*
     left:0;
     top:0;
@@ -125,6 +183,7 @@ body {
     right: 40px;
     bottom: 40px;
     width: 160px;
+    border-radius: 5px;
   }
 
   a {

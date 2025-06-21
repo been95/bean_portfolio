@@ -4,4 +4,5 @@ if (a >= 320) {
   console.log("숨기기");
 } else {
   console.log("보여줘");
+  bo;
 }

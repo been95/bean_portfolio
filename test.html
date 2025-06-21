@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            height: 7500px;
+        }
+
+        .container {
+            position: fixed;
+            inset: 0 0 0 0;
+
+        }
+
+
+        .test-girl {
+            position: fixed;
+            left: 200px;
+            bottom: 100px;
+            width: 150px;
+            transition: translate 3s;
+        }
+
+        .test-ground {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        button img {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./images/test-ground.png" class="test-ground">
+        <img src="./images/girl.png" alt="tree" class="test-girl">
+        <button type="button" class="computer">
+            <img src="./images/been.jpg" alt='코딩포트폴리오'>
+        </button>
+    </div>
+
+    <script>
+        const ground = document.querySelector('.test-ground');
+        const girl = document.querySelector('.test-girl');
+
+        window.addEventListener('scroll', (e) => {
+            const scrollY = window.scrollY;
+            console.log(scrollY)
+            ground.style.left = `-${scrollY}px`;
+            girl.style.translate = `0 -${scrollY / 30}px`;
+
+        })
+
+        const btn = document.querySelector('.computer')
+        btn.addEventListener('mouseenter', (e) => {
+            const img = e.currentTarget.children[0]
+            img.setAttribute('src', './images/been.gif')
+        })
+        btn.addEventListener('mouseleave', (e) => {
+            const img = e.currentTarget.children[0]
+            img.setAttribute('src', './images/been.jpg')
+        })
+    </script>
+</body>
+
+</html>

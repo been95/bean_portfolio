@@ -45,35 +45,47 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <img src="./images/test-ground.png" class="test-ground">
         <img src="./images/girl.png" alt="tree" class="test-girl">
         <button type="button" class="computer">
             <img src="./images/been.jpg" alt='코딩포트폴리오'>
         </button>
-    </div>
+    </div> -->
+
+    <section class="section">
+        <h1>Hello H1</h1>
+        <p>Pragraph tag<span>SPANSPANSPAN</span></p>
+    </section>
 
     <script>
-        const ground = document.querySelector('.test-ground');
-        const girl = document.querySelector('.test-girl');
+        const section = document.querySelector('.section')
 
-        window.addEventListener('scroll', (e) => {
-            const scrollY = window.scrollY;
-            console.log(scrollY)
-            ground.style.left = `-${scrollY}px`;
-            girl.style.translate = `0 -${scrollY / 30}px`;
-
+        section.addEventListener('click', (e) => {
+            console.log('e.target : ', e.target)
+            console.log('e.currentTarget : ', e.currentTarget)
         })
 
-        const btn = document.querySelector('.computer')
-        btn.addEventListener('mouseenter', (e) => {
-            const img = e.currentTarget.children[0]
-            img.setAttribute('src', './images/been.gif')
-        })
-        btn.addEventListener('mouseleave', (e) => {
-            const img = e.currentTarget.children[0]
-            img.setAttribute('src', './images/been.jpg')
-        })
+        // const ground = document.querySelector('.test-ground');
+        // const girl = document.querySelector('.test-girl');
+
+        // window.addEventListener('scroll', (e) => {
+        //     const scrollY = window.scrollY;
+        //     console.log(scrollY)
+        //     ground.style.left = `-${scrollY}px`;
+        //     girl.style.translate = `0 -${scrollY / 30}px`;
+
+        // })
+
+        // const btn = document.querySelector('.computer')
+        // btn.addEventListener('mouseenter', (e) => {
+        //     const img = e.currentTarget.children[0]
+        //     img.setAttribute('src', './images/been.gif')
+        // })
+        // btn.addEventListener('mouseleave', (e) => {
+        //     const img = e.currentTarget.children[0]
+        //     img.setAttribute('src', './images/been.jpg')
+        // })
     </script>
 </body>
 

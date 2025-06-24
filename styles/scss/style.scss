@@ -25,12 +25,20 @@ body {
 .main-bg {
   width: 50%;
   height: 100vh;
-
+  overflow-x: auto;
+  overflow-y: hidden;
   position: fixed;
   inset: 0 auto 0 0;
   background: no-repeat center center/cover;
   background-image: url($url + "cloud.png"), url($url + "cloud_back.png");
 
+  .animation-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8000px;
+  }
   img {
     position: absolute;
   }
@@ -38,10 +46,9 @@ body {
   // image layout
 
   .ground {
-    bottom: -22px;
+    bottom: 0;
     left: 0;
-    right: 0;
-    height: 180px;
+    height: 341px;
   }
   .mountain_1 {
     right: 0;
@@ -54,7 +61,7 @@ body {
     width: 250px;
   }
   .tree1 {
-    right: 0;
+    left: 400px;
     bottom: 137px;
     width: 220px;
   }
@@ -68,9 +75,27 @@ body {
     bottom: 137px;
     width: 90px;
   }
+
+  .tree4 {
+    left: 50%;
+    bottom: 150px;
+    width: 200px;
+  }
+
+  .tree5 {
+    left: 60%;
+    bottom: 170px;
+    width: 100px;
+  }
+
+  .tree6 {
+    left: 80%;
+    bottom: 180px;
+    width: 90px;
+  }
   .girl {
     bottom: 100px;
-    left: 40%;
+    left: 14%;
     width: 18%;
     min-width: 110px;
     max-width: 200px;
@@ -78,15 +103,19 @@ body {
   }
 
   .front_left {
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 40%;
+    max-width: 300px;
   }
 
   .front_right {
-    right: 0;
+    right: 50%;
     bottom: 0;
     width: 30%;
+    max-width: 250px;
+    position: fixed;
   }
 
   /*

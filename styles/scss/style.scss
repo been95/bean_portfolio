@@ -51,28 +51,59 @@ body {
     height: 341px;
   }
   .mountain_1 {
-    right: 0;
-    bottom: 138px;
-    width: 300px;
+    left: 550px;
+    bottom: 105px;
+    width: 590px;
   }
   .mountain_2 {
     left: 0;
-    bottom: 118px;
+    bottom: 84px;
+    width: 453px;
+  }
+  .mountain_3 {
+    width: 800px;
+    left: 11%;
+    bottom: 65px;
+  }
+  .mountain_4 {
+    width: 683px;
+    left: 13%;
+    top: 247px;
+  }
+  .mountain_5 {
+    width: 860px;
+    left: 21%;
+    bottom: -29px;
+  }
+
+  .mountain_6 {
+    width: 532px;
+    left: 22%;
+    top: 68px;
+  }
+  .mountain_7 {
     width: 250px;
+    left: 20%;
+    bottom: 84px;
+  }
+  .mountain_7 {
+    width: 250px;
+    left: 20%;
+    bottom: 84px;
   }
   .tree1 {
-    left: 400px;
+    left: 730px;
     bottom: 137px;
-    width: 220px;
+    width: 276px;
   }
   .tree2 {
-    left: 30%;
-    bottom: 137px;
-    width: 40px;
+    left: 8%;
+    bottom: 120px;
+    width: 48px;
   }
   .tree3 {
     left: 6%;
-    bottom: 137px;
+    bottom: 109px;
     width: 90px;
   }
 
@@ -93,6 +124,11 @@ body {
     bottom: 180px;
     width: 90px;
   }
+  .tree7 {
+    left: 20%;
+    bottom: 180px;
+    width: 200px;
+  }
   .girl {
     bottom: 100px;
     left: 14%;
@@ -100,6 +136,11 @@ body {
     min-width: 110px;
     max-width: 200px;
     position: fixed;
+  }
+  .cloud_4 {
+    width: 582px;
+    left: 20%;
+    top: 163px;
   }
 
   .front_left {

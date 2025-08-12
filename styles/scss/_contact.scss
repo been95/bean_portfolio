@@ -1,0 +1,90 @@
+@charset "utf-8";
+@use "sass:list";
+@use "sass:map";
+
+@use "variables" as *;
+@use "reset";
+@use "font";
+@use "utils" as *;
+
+body {
+  font-family: Ria, "Noto Sans KR", sans-serif;
+  background-color: #81c4ed;
+}
+.main {
+  border-radius: 10px;
+  width: calc(50% - 16px);
+  margin: 8px 8px 8px auto;
+  text-align: center;
+  overflow-x: hidden;
+
+  .con-intro {
+    height: calc(100vh - 100px);
+    @include center;
+
+    h2 {
+      color: #4bc2a6;
+      font-size: 100px;
+    }
+  }
+  .announcement {
+    height: calc(200px - 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 50px;
+    p {
+      font-family: noto-sans;
+    }
+  }
+}
+
+.contact-form {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 1015px;
+  padding: 50px 50px 80px 50px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}

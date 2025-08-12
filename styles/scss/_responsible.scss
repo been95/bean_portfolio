@@ -1,0 +1,14 @@
+@use "sass:list";
+@use "sass:map";
+
+@media all and (max-width: 1200px) {
+  .profile {
+    .profile-right {
+      padding: 40px;
+
+      strong {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

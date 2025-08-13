@@ -1,3 +1,83 @@
+@charset "utf-8";
+@use "sass:list";
+@use "sass:map";
+
+@use "variables" as *;
+@use "reset";
+@use "font";
+@use "utils" as *;
+
+body {
+  font-family: Ria, "Noto Sans KR", sans-serif;
+  background-color: #81c4ed;
+}
+.main {
+  border-radius: 10px;
+  width: calc(50% - 16px);
+  margin: 8px 8px 8px auto;
+  text-align: center;
+  overflow-x: hidden;
+
+  .profile-intro {
+    height: calc(100vh - 200px);
+    @include center;
+
+    h2 {
+      color: #4bc2a6;
+      font-size: 100px;
+    }
+  }
+
+  .profile {
+    text-align: center;
+    padding: 60px 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-name {
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    color: #81c4ed;
+  }
+
+  .profile-links {
+    font-family: noto-sans;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    margin: 16px 0px 0px 0px;
+  }
+
+  .profile-links a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .profile-links a:hover {
+    text-decoration: underline;
+  }
+
+  .profile-bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: noto-sans;
+    margin: 40px 0px 0px 0px;
+  }
+}
+.timeline {
+  display: flex;
+  justify-items: space-between;
+}
 .accordion-item {
   border-radius: 10px;
   background: #fafafa;

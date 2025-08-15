@@ -146,6 +146,7 @@ body {
 /*모달박스*/
 .modalBox {
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
   position: fixed;
   inset: 0 0 0 0;
   display: flex;

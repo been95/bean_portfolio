@@ -45,7 +45,7 @@ body {
   }
 
   .profile-links {
-    font-family: noto-sans;
+    @extend %krFont;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -70,8 +70,8 @@ body {
     text-align: left;
     font-size: 1rem;
     line-height: 1.6;
-    font-family: noto-sans;
     margin: 40px 0px 0px 0px;
+    @extend %krFont;
   }
 }
 .timeline {

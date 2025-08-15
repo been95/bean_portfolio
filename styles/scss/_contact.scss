@@ -34,7 +34,7 @@ body {
     justify-content: center;
     padding: 40px 50px;
     p {
-      font-family: noto-sans;
+      @extend %krFont;
     }
   }
 }

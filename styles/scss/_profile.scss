@@ -7,10 +7,6 @@
 @use "font";
 @use "utils" as *;
 
-body {
-  font-family: Ria, "Noto Sans KR", sans-serif;
-  background-color: #81c4ed;
-}
 .main {
   border-radius: 10px;
   width: calc(50% - 16px);
@@ -35,17 +31,15 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-  }
 
-  .profile-name {
-    font-size: 40px;
-    font-weight: 900;
-    text-align: center;
-    color: #81c4ed;
+    .profile-name {
+      font-weight: 900;
+      text-align: center;
+      color: #81c4ed;
+    }
   }
 
   .profile-links {
-    @extend %krFont;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -71,7 +65,6 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     margin: 40px 0px 0px 0px;
-    @extend %krFont;
   }
 }
 .timeline {
@@ -113,11 +106,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 24px;
-  font-size: 18px;
   font-weight: 700;
   border: none;
   background: transparent;
   cursor: pointer;
+  @extend %ria;
+  font-size: 18px;
   color: #81c4ed;
 }
 
@@ -144,8 +138,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 11px;
-  @extend %krFont;
+  font-size: 13px;
 }
 
 .col li {

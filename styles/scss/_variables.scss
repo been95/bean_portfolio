@@ -16,6 +16,9 @@ $box: (
 
 @debug map.get($box, radius);
 
-%krFont {
-  font-family: "Noto Sans KR", sans-serif;
+%ria {
+  font-family: Ria, sans-serif;
+  font-size: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }

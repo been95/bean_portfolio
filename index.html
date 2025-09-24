@@ -13,13 +13,14 @@
         <h1>꼬리별</h1>
         <nav>
             <ul>
-                <li><a href="#home"><img src="./images/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="홈">HOME</a>
+                <li><a href="./index.html"><img src="./images/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="홈">HOME</a>
                 </li>
-                <li><a href="#works"><img src="./images/edit_document_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                <li><a href="./works.html"><img src="./images/edit_document_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="edit">WORKS</a></li>
-                <li><a href="profile.html"><img src="./images/ink_pen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                <li><a href="./profile.html"><img src="./images/ink_pen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="pen">PROFILE</a></li>
-                <li><a href="contact.html"><img
+                <li><a href="./contact.html"><img
                             src="./images/stylus_fountain_pen_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="아이콘">CONTACT</a></li>
             </ul>
@@ -67,34 +68,66 @@
                 </header>
 
                 <!-- modal button menu -->
-                <button type="button" class="star">
+                <button type="button" class="star" data-modal="starModal">
                     <img src="./images/star.jpg" alt='꼬리별포트폴리오'>
                 </button>
 
-                <button type="button" class="painting">
+                <button type="button" class="painting" data-modal="paintingModal">
                     <img src="./images/painting.jpg" alt='일러스트포트폴리오'>
                 </button>
-                <button type="button" class="computer">
+                <button type="button" class="computer" data-modal="computerModal">
                     <img src="./images/coding.png" alt='코딩포트폴리오'>
                 </button>
-                <button type="button" class="been">
+                <button type="button" class="been" data-modal="beenModal">
                     <img src="./images/been.jpg" alt='포트폴리오'>
                 </button>
 
-                <!-- modal box -->
-                <article class="modalBox">
+                <article id="starModal" class="modalBox">
                     <div class="inner">
                         <h3 class="title">꼬리별</h3>
-                        <ul>
-                            <li>
-                                <a href="#">#wed</a>
-                            </li>
-                            <li><a href="#">#illust</a></li>
-                        </ul>
-                        <img src="./images/home.png" alt="꼬리별 포트폴리오">
-                        <button id="close">닫기</button>
+                        <p></p>
+                        <button class="close">&times;</button>
                     </div>
                 </article>
+
+                <article id="paintingModal" class="modalBox">
+                    <div class="inner">
+                        <h3 class="title">일러스트 포트폴리오</h3>
+                        <img src="./images/coffe2.jpg" alt="일러스트">
+                        <img src="./images/coffe1.jpg" alt="일러스트">
+                        <p>카페를 운영하는 클라이언트를 위한 컵홀더 및 일러스트 디자인이다. <br>
+                            클라이언트가 특히 ‘말(馬)’을 좋아한다는 점을 반영해, 일러스트 속에 말을 중심 요소로 배치하였다. <br>
+                            이를 통해 단순한 음료 패키징을 넘어, 카페의 개성과 클라이언트의 취향을 동시에 담아내는 맞춤형 디자인을 완성하였다. <br>
+                            컵홀더는 따뜻하고 친근한 분위기를 주는 파스텔 톤을 사용하여, 고객이 음료를 받는 순간 작은 즐거움과 특별함을 느낄 수 있도록 의도하였다. <br>
+                            또한 포스터형 일러스트에서는 말과 사람, 자연 풍경을 조화롭게 구성해 카페가 단순한 소비 공간을 넘어 ‘머물고 싶은 경험 공간’임을 시각적으로 전달하였다.</p>
+
+                        <button class="close">&times;</button>
+                    </div>
+                </article>
+
+                <article id="computerModal" class="modalBox">
+                    <div class="inner">
+                        <h3 class="title">코딩 포트폴리오</h3>
+                        <img src="./images/icemedia.jpg" alt="아이스미디어">
+                        <p>실제 서비스 웹사이트 구조와 인터페이스를 분석하고 구현한 아이디어스 클론 코딩 프로젝트는, 퍼블리싱 역량을 실질적으로 향상시키기 위해 진행되었다. HTML, CSS,
+                            JavaScript를 중심으로 반응형 레이아웃과 다양한 UI 요소를 직접 구현하며 웹 서비스 전반의 흐름을 경험할 수 있었다. 특히 실제 사용성을 고려한 화면 전환과
+                            인터랙션을 적용해 단순한 모방이 아닌 학습과 응용의 결과물을 만들고자 했다. 이를 통해 웹사이트 구축 과정에 대한 이해를 넓히고, 실무에서 활용 가능한 역량을 쌓는
+                            데 초점을 두었다."
+                        </p>
+                        <button class="close">&times;</button>
+                    </div>
+                </article>
+
+                <article id="beenModal" class="modalBox">
+                    <div class="inner">
+                        <h3 class="title">Been 포트폴리오</h3>
+                        <img src="./images/illust.jpg" alt="일러스트">
+                        <img src="./images/illust5.png" alt="일러스트">
+
+                        <button class="close">&times;</button>
+                    </div>
+                </article>
+
 
             </section>
 
@@ -121,7 +154,6 @@
                     <a href="#">View More</a>
                 </div>
             </section>
-            <section></section>
             <section class="contact-section">
                 <a href="#contact" class="scrolling-contact">
                     <span>CONTACT · CONTACT · CONTACT · CONTACT · CONTACT · CONTACT · CONTACT · CONTACT · </span>
@@ -130,13 +162,12 @@
         </main>
     </div>
     <footer class="footer">
-        <h2 class="footer-logo">yeomcheabeen</h2>
+        <h2 class="footer-logo">yeomchaebeen</h2>
         <nav class="footer-nav">
-            <a href="#">HOME</a>
-            <a href="#">WORKS</a>
-            <a href="#">PROFILE</a>
-            <a href="#">TOPICS</a>
-            <a href="#">CONTACT</a>
+            <a href="./index.html">HOME</a>
+            <a href="./works.html">WORKS</a>
+            <a href="./profile.html">PROFILE</a>
+            <a href="./contact.html">CONTACT</a>
         </nav>
         <p class="footer-copy">© yeomcheabeen Portfolio</p>
     </footer>

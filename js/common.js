@@ -41,14 +41,40 @@ window.addEventListener("scroll", () => {
 
 /*모달창 */
 
-const btn = document.querySelector(".star");
-const modalBox = document.querySelector(".modalBox");
-const close = document.getElementById("close");
-btn.addEventListener("click", (e) => {
-  modalBox.style.display = "flex";
+// const btn = document.querySelector(".star");
+// const modalBox = document.querySelector(".modalBox");
+// const close = document.getElementById("close");
+// btn.addEventListener("click", (e) => {
+//   modalBox.style.display = "flex";
+// });
+// close.addEventListener("click", (e) => {
+//   modalBox.style.display = "none";
+// });
+
+// 모든 버튼에 이벤트 걸기
+const btn = document.querySelectorAll("button[data-modal]");
+const modals = document.querySelectorAll(".modalBox");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const target = document.getElementById(btn.dataset.modal);
+    target.style.display = "flex";
+  });
 });
-close.addEventListener("click", (e) => {
-  modalBox.style.display = "none";
+
+// 닫기 버튼에 이벤트
+const closeBtns = document.querySelectorAll(".modalBox .close");
+closeBtns.forEach((close) => {
+  close.addEventListener("click", () => {
+    close.closest(".modalBox").style.display = "none";
+  });
+});
+
+// 바깥 클릭 시 닫기
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("modalBox")) {
+    e.target.style.display = "none";
+  }
 });
 
 /* 아코디언창 */

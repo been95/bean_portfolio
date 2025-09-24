@@ -16,17 +16,18 @@
                 <h2>works</h2>
             </div>
         </section>
-        <div class="works-grid">
+        <section class="works-grid">
             <!-- 10개 항목 -->
             <div class="work-item" data-title="꼬리별" data-desc="‘꼬리별’은 감성과 기록을 동시에 담아내는 다이어리 애플리케이션이다. 단순히 일기를 쓰는 기능을 넘어, 사용자가 하루하루의 감정을 자유롭게 기록하고, 이를 데이터로 분석하여 자신의 패턴과 변화를 통계적으로 확인할 수 있는 기능을 제공한다.
-
+ 
             앱의 가장 큰 특징은 개인화된 꾸미기 기능이다. 사용자는 사진과 스티커를 활용해 다이어리를 자신만의 스타일로 꾸밀 수 있으며, 일러스트와 다양한 감정 스티커를 통해 그날의 기분을 직관적으로 표현할 수 있다. 또한, 다이어리 표지 역시 사용자가 원하는 이미지나 디자인으로 변경할 수 있어, 나만의 책 한 권을 만들어가는 듯한 경험을 준다.
 
             전체 디자인은 별과 밤하늘에서 영감을 받은 감성적인 UI로 구성되었다. 별똥별처럼 스쳐가는 순간들을 붙잡아 기록할 수 있도록, 간단하면서도 따뜻한 분위기를 구현했다. 이를 통해 사용자는 매일의 작은 기록이 쌓여, 어느새 별자리처럼 이어진 자신의 이야기를 발견할 수 있다.
 
             ‘꼬리별’은 단순한 기록 앱을 넘어, 사용자가 스스로를 돌아보고 더 깊이 이해할 수 있도록 돕는 감성적이면서도 실용적인 다이어리 플랫폼이다."
-                data-img="./images/home.png">
+                data-img="./images/home_detail.png">
                 <img src="./images/home.png" alt="꼬리별">
+
                 <p>꼬리별</p>
             </div>
             <div class="work-item" data-title="아이스미디어"
@@ -87,6 +88,16 @@
                 <img src="./images/illust5.png" alt="일러스트">
                 <p>고양이 일러스트</p>
             </div>
+        </section>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <img id="modal-img" src="" style="width:100%; border-radius:8px;">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+            </div>
         </div>
 
 
@@ -96,11 +107,9 @@
 
 
     </main>
-
+    <script src="./js/worksModal.js"></script>
 </body>
 
-<script>
 
-</script>
 
 </html>

@@ -6,15 +6,15 @@ const route = (event) => {
 };
 
 const routes = {
-  404: "/pages/404.html",
-  "/": "/pages/home.html",
-  "/profile": "/pages/profile.html",
-  "/works": "/pages/works.html",
-  "/contact": "/pages/contact.html",
+  404: "./pages/404.html",
+  "/": "./pages/home.html",
+  "/profile": "./pages/profile.html",
+  "/works": "./pages/works.html",
+  "/contact": "./pages/contact.html",
 };
 
 const handleLocation = async () => {
-  const path = window.location.pathname; 
+  const path = window.location.pathname;
   const route = routes[path] || routes[404];
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("main-page").innerHTML = html;

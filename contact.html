@@ -24,7 +24,10 @@
         </section>
         <section class="contact-form">
             <h2>Contact Us</h2>
-            <form action="#" method="post">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+
+                <input type="hidden" name="access_key" value="a3d02405-e3c8-4c30-9607-29a436211b7f">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
@@ -34,8 +37,16 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your message here..." rows="4" required></textarea>
 
+
+
+                <label for="work_type">문의유형</label>
+                <select name="type" id="work_type">
+                    <option>Web publishing</option>
+                    <option>Illust</option>
+                </select>
                 <button type="submit">Send</button>
             </form>
+
         </section>
     </main>
 

@@ -92,7 +92,8 @@ header.scrolled {
     .title {
       @extend %ria;
 
-      color: rgb(75, 194, 166);
+      color: #81c4ed;
+      margin-bottom: 45px;
     }
   }
   .noBg {
@@ -164,17 +165,17 @@ header.scrolled {
     width: 160px;
     border-radius: 5px;
   }
+}
 
-  a {
-    width: 180px;
-    background-color: #81c4ed;
-    border-radius: 50px;
-    height: 50px;
-    display: block;
-    color: #fff;
-    display: inline-block;
-    padding: 15px 30px;
-  }
+.more-btn {
+  width: 180px;
+  background-color: #81c4ed;
+  border-radius: 50px;
+  height: 50px;
+  display: block;
+  color: #fff;
+  display: inline-block;
+  padding: 15px 30px;
 }
 
 .profile {
@@ -281,4 +282,33 @@ header.scrolled {
   font-size: 0.75rem;
   opacity: 0.6;
   margin-bottom: 20px;
+}
+
+.main-bg {
+  .balloon {
+    position: absolute;
+    bottom: 200px;
+    height: 380px;
+    width: 250px;
+    background: url(../../images/speech_bubble1.png) no-repeat center top/100%
+      100%;
+    border-radius: 20px;
+    padding: 1rem 1rem 70px;
+  }
+
+  .balloon-a {
+    left: 1000px;
+  }
+  .balloon-b {
+    left: 3000px;
+  }
+  .balloon-c {
+    left: 4000px;
+  }
+  .balloon-d {
+    left: 5000px;
+  }
+  .balloon-e {
+    left: 6000px;
+  }
 }

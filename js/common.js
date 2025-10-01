@@ -77,6 +77,13 @@ window.addEventListener("click", (e) => {
   }
 });
 
+const mainscroll = document.getElementById("main-scroll");
+const girl = document.getElementById("girl");
+
+mainscroll.addEventListener("scroll", () => {
+  girl.src = ["./images/girlmove.gif"];
+});
+
 /* 아코디언창 */
 
 /*
